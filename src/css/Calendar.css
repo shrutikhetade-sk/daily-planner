@@ -1,0 +1,86 @@
+.calendar-container {
+    margin: 1.5rem auto;
+    width: 120%;
+    max-width: 380px;
+    background: #753742;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+}
+
+.calendar-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* ⬅ centers arrows perfectly with the month name */
+    margin-bottom: 1rem;
+    padding: 0 0.2rem;
+}
+
+.calendar-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    /* ⬅ removes extra vertical space */
+    line-height: 1;
+    /* ⬅ aligns text height */
+    text-align: center;
+    flex: 1;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.calendar-day-name {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.calendar-day {
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.calendar-day.empty {
+    background: transparent;
+}
+
+.calendar-day.today {
+    border: 2px solid #F3F3F3;
+    background: #225560;
+    font-weight: bold;
+}
+
+.calendar-day.streak {
+    background-color: #8BC34A;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.month-arrow {
+    background: #4F3130;
+    color: white;
+    border: none;
+    padding: 0.35rem 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 30px;
+    /* ⬅ ensures perfect alignment */
+    display: flex;
+    /* ⬅ centers arrow text inside button */
+    align-items: center;
+    justify-content: center;
+}

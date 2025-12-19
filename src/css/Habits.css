@@ -1,0 +1,193 @@
+.calendar-wrapper {
+    display: grid;
+    justify-content: end;
+    margin-right: 3rem;
+    margin-top: -1.5rem;
+}
+
+.fa-fire {
+    color: #ff8b3d;
+}
+
+.streak-wrapper {
+    display: grid;
+    justify-content: end;
+    margin-right: 3rem;
+    margin-top: -2rem;
+}
+
+.streak-header {
+    background-color: #225560;
+    width: 120%;
+    max-width: 380px;
+    display: grid;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    margin: 1rem auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+.streak-content {
+    font-size: 2.3rem;
+}
+
+.habit-main {
+    text-align: center;
+    font-size: 2rem;
+    padding: 5rem;
+}
+
+.layout-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* left and right */
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Left side */
+.main-habit-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #CE7DA5;
+    border-radius: 12px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+/* Right side boxes */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 3rem;
+    margin-top: 1.2rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 2rem 2rem 0 2rem;
+}
+
+.habit-input {
+    flex-grow: 1;
+    padding: 0.7rem;
+    width: 75%;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: large;
+    font-weight: 500;
+}
+
+.add-button {
+    background-color: #548C2F;
+    border: 1px solid #1a3d03;
+}
+
+.habit-main {
+    text-align: center;
+    font-size: 2rem;
+    padding: 5rem;
+}
+
+.habit-list {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 1rem 2rem 2rem 2rem;
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 5px 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: 500;
+
+    animation: slideIn 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    /* Vertical center */
+    justify-content: center;
+    /* Horizontal center */
+    line-height: 0;
+}
+
+.checkbox-input:checked {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.checkbox-input:checked::after {
+    content: '✔';
+    color: #333;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.habit-item:hover {
+    transform: scale(1.01);
+}
+
+.habit-item.done .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-text {
+    flex: 1;
+    color: #fff;
+}
+
+.edit-input {
+    flex: 1;
+    padding: 6px;
+}
+
+.habit-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

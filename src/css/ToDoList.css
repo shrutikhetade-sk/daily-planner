@@ -1,0 +1,203 @@
+.layout-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* left and right */
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Left side */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #CE7DA5;
+    border-radius: 12px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+/* Right side boxes */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 3rem;
+    margin-top: 1.2rem;
+}
+
+.box {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #225560;
+    font-size: 2rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 2rem 2rem 0 2rem;
+}
+
+.todo-input {
+    flex-grow: 1;
+    padding: 0.7rem;
+    width: 75%;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: large;
+    font-weight: 500;
+}
+
+.add-button {
+    background-color: #548C2F;
+    border: 1px solid #1a3d03;
+}
+
+.todo-main {
+    text-align: center;
+    font-size: 2rem;
+    padding: 5rem;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    margin: 1rem 2rem 2rem 2rem;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 5px 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: large;
+    font-weight: 500;
+
+    animation: slideIn 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    /* Vertical center */
+    justify-content: center;
+    /* Horizontal center */
+    line-height: 0;
+}
+
+.checkbox-input:checked {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.checkbox-input:checked::after {
+    content: '✔';
+    color: #333;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-item:hover {
+    transform: scale(1.01);
+}
+
+.todo-item.done .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-text {
+    flex: 1;
+    color: #fff;
+}
+
+.edit-input {
+    flex: 1;
+    padding: 6px;
+}
+
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.progress-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.progress-item:last-child {
+    border-bottom: none;
+}
+
+.progress-item span:last-child {
+    font-weight: bolder;
+}
+
+.progress-item.active {
+    font-weight: bolder;
+}
+
+.editable-note {
+    min-height: 50px;
+    padding: 5px;
+    font-size: 1.1rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.editable-note:empty:before {
+    content: attr(data-placeholder);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.task-heading {
+    font-size: 27px;
+    margin-top: -0.8rem;
+}
+
+.task-subtext {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}

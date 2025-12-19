@@ -1,0 +1,12 @@
+.timer-btn{
+    font-size: 1.1rem;
+    margin: 0.1rem 0.5rem;
+    background-color: #fff;
+    color: #1a3d03;
+    padding: 0.8rem;
+    flex: 1;
+}
+
+.timer-para{
+    margin-left: 0.5rem;
+}

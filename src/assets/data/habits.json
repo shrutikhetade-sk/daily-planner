@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "text": "15 Minutes Meditation",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "text": "Workout",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "text": "Eat Healthy",
+    "completed": false
+  }
+]
